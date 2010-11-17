@@ -1,0 +1,13 @@
+<% title "New Status" %>
+
+<% form_for @status do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :message %><br />
+    <%= f.text_field :message %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
+
+
+<p><%= link_to "Back to List", root_path %></p>

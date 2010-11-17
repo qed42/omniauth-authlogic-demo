@@ -1,0 +1,14 @@
+<% title "Statuses" %>
+
+<table>
+  <tr>
+    <th>Message</th>
+  </tr>
+  <% for status in @statuses %>
+    <tr>
+      <td><%=h status.message %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Status", new_status_path %></p>

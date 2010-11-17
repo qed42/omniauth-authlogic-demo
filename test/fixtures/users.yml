@@ -1,0 +1,15 @@
+one:
+  username: MyString
+  crypted_password: MyString
+  password_salt: MyString
+  perishable_token: MyString
+  persistence_token: MyString
+  email: MyString
+
+two:
+  username: MyString
+  crypted_password: MyString
+  password_salt: MyString
+  perishable_token: MyString
+  persistence_token: MyString
+  email: MyString

@@ -1,0 +1,10 @@
+<% title "Sign up" %>
+
+<%= render :partial => 'form' %>
+
+<h1>OR</h1>
+<h3>Sign in with</h3>
+<%= link_to image_tag("auth/google_64.png"), "/auth/open_id?openid_url=https://www.google.com/accounts/o8/id" %>
+<% ["twitter","facebook", "linked_in"].each do |provider| %>
+  <%= link_to image_tag("auth/#{provider}_64.png"), "/auth/#{provider}" %>
+<% end %>
