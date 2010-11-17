@@ -1,4 +1,4 @@
-==OmniAuth with Authlogic demo
+=OmniAuth with Authlogic demo
 Omniauth is a pretty simple solution if you want your users to authenticate using oauth and openid providers. Here I am using authlogic to manage the user sessions and omniauth to do the external authentication.
 
 ==Set up
