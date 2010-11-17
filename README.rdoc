@@ -6,6 +6,7 @@ I have tested this with rails 2.3.8. I guess it will work with 2.3.x versions as
   sudo gem install bundler
   git clone git@github.com:madhums/omniauth-authlogic-demo.git
   bundle install
+  rake db:migrate
   script/server
 Dont forget to replace your oauth,openid keys and secret in config/initializers/omniauth.rb.
 
