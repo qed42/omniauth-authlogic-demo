@@ -101,3 +101,12 @@
   .auth_providers_used {
     margin-right:15px;
   }
+  
+  #logo {
+    float:left;
+  }
+  
+  #logo h1 a {
+    color:#111;
+    text-decoration:none;
+  }
