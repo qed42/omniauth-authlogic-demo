@@ -4,7 +4,7 @@ Omniauth is a pretty simple solution if you want your users to authenticate usin
 ==Set up
 I have tested this with rails 2.3.8. I guess it will work with 2.3.x versions as well. I am using bundler to manage the gems.
   sudo gem install bundler
-  git clone git@github.com:madhums/omniauth-authlogic-demo.git
+  git clone git://github.com/madhums/omniauth-authlogic-demo.git
   bundle install
   rake db:migrate
   script/server
