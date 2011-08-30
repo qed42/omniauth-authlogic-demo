@@ -1,6 +1,6 @@
 <% title "Sign up" %>
 
-<%= render :partial => 'form' %>
+<%= render 'form', :user => @user, :authorizations => @authorizations %>
 
 <div class="omniauth-connect">
   <h1>OR</h1>

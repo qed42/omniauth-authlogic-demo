@@ -1,9 +1,8 @@
 class StatusesController < ApplicationController
   before_filter :require_user, :only => [:create]
-  
+
   def create
-    @status = Status.new(params[:status])
-    @status.user_id = current_user.id
+    @status = current_user.statuses.build(params[:status])
     if @status.save
       flash[:notice] = "Successfully posted"
     else
@@ -11,8 +10,8 @@ class StatusesController < ApplicationController
     end
     redirect_to root_url
   end
-  
+
   def index
-    @statuses = Status.all :order => 'created_at desc'
+    @statuses = Status.recent
   end
 end

@@ -1,9 +1,9 @@
 <div id="omniauth_connect">
-  <% if @authorizations %>
-    <% unless @authorizations.empty? %>
+  <% if authorizations %>
+    <% unless authorizations.empty? %>
       <p><b>You can sign in to this account using:</b></p>
       <div class="authentications">
-        <% for authorization in @authorizations %>
+        <% for authorization in authorizations %>
           <span class="auth_providers_used">
             <%= image_tag "auth/#{authorization.provider}_32.png" %>
             <%= link_to image_tag("auth/remove.png"), authorization, :confirm => "Are you sure you want to remove #{authorization.provider} authentication option?", :method => :delete, :class => "omniauth_remove", :title => "remove #{authorization.provider} authentication option?" %>
@@ -29,4 +29,4 @@
     <%= image_tag "auth/linked_in_32.png", :alt => "Linkedin" %>
   </a>
   <div class="clear"></div>
-</div>  
+</div>
