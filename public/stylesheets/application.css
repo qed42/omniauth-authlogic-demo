@@ -10,7 +10,7 @@
   }
 
   a, a:hover {
-    color: #2D76B9;
+    color: #369;
     text-decoration:none;
   }
   
@@ -175,4 +175,12 @@
   .time {
     color:#999;
     font-size:12px;
+  }
+  
+  .username {
+    color:#007000;
+  }
+  
+  .no-username {
+    color:#888;
   }
