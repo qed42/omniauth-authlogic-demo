@@ -1,14 +1,22 @@
 <% title "Statuses" %>
 
+<p>
+  <%= render :partial => 'statuses/form', :locals => { :status => Status.new } %>
+</p>
+
 <table>
-  <tr>
-    <th>Message</th>
-  </tr>
   <% for status in @statuses %>
     <tr>
-      <td><%=h status.message %></td>
+      <td><b><p><%= h status.user.username+' :' if status.user %></p> </b></td>
+      <td>
+        <p>
+          <%=h status.message %>
+        </p>  
+        <div class="time">
+          <%=h status.created_at.strftime('%b %d, %Y') %>
+        </div>
+      
+      </td>
     </tr>
   <% end %>
 </table>
-
-<p><%= link_to "New Status", new_status_path %></p>
