@@ -7,6 +7,7 @@ class StatusesController < ApplicationController
   
   def create
     @status = Status.new(params[:status])
+    @status.user_id = current_user.id
     if @status.save
       flash[:notice] = "Successfully created status."
       redirect_to root_url
