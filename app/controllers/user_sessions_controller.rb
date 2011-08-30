@@ -9,7 +9,7 @@ class UserSessionsController < ApplicationController
       flash[:notice] = "Successfully created user session."
       redirect_to root_url
     else
-      render :action => 'new'
+      render :new
     end
   end
   
