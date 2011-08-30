@@ -1,0 +1,11 @@
+<% form_for(status) do |f| %>
+  <%= f.error_messages(
+    :header_message => '',
+    :message => 'Following errors were found:',
+    :id=> "flash_error"
+    )
+  %>
+  <p>
+    New Status : <%= f.text_field :message %> &nbsp; &nbsp; <%= f.submit 'Submit' %>
+  </p>
+<% end %>
