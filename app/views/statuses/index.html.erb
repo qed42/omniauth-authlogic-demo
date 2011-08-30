@@ -7,7 +7,13 @@
 <table>
   <% for status in @statuses %>
     <tr>
-      <td><b><p><%= h status.user.username+' :' if status.user %></p> </b></td>
+      <td>
+        <% if status.user %>
+          <p class="username"><%= h status.user.username %> : </p>
+        <% else %>
+          <p class="no-username">unidentified user : </p>
+        <% end %>
+      </td>
       <td>
         <p>
           <%=h status.message %>
