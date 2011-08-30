@@ -12,7 +12,7 @@ Unfortunately omniauth doesn't support 2.3.x (according to this [omniauth/issues
     rake db:migrate
     script/server
 
-Dont forget to replace your oauth,openid keys and secret in config/initializers/omniauth.rb.    
+**Important :** Dont forget to replace your oauth,openid keys and secret in `config/initializers/omniauth.rb`.    
 
 The demo app is at http://omniauth-authlogic-demo.heroku.com/signin    
 
