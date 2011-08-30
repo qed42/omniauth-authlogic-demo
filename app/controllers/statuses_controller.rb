@@ -1,22 +1,18 @@
 class StatusesController < ApplicationController
-  before_filter :require_user, :only => [:new]
-  
-  def new
-    @status = Status.new
-  end
+  before_filter :require_user, :only => [:create]
   
   def create
     @status = Status.new(params[:status])
     @status.user_id = current_user.id
     if @status.save
-      flash[:notice] = "Successfully created status."
-      redirect_to root_url
+      flash[:notice] = "Successfully posted"
     else
-      render :action => 'new'
+      flash[:error] = 'Status '+@status.errors[:message]
     end
+    redirect_to root_url
   end
   
   def index
-    @statuses = Status.all
+    @statuses = Status.all :order => 'created_at desc'
   end
 end
