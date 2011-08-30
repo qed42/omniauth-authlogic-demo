@@ -13,7 +13,7 @@
     color: #369;
     text-decoration:none;
   }
-  
+
   a:hover {
     text-decoration:underline;
   }
@@ -92,33 +92,33 @@
     float: right;
     font-size: 14px;
   }
-  
+
   .auth_provider {
     margin-right:15px;
   }
-  
+
   #omniauth_connect p {
     margin:1em 0 5px 0;
   }
-  
+
   .omniauth_remove {
     position:absolute;
     margin-left:-5px;
   }
-  
+
   .auth_providers_used {
     margin-right:15px;
   }
-  
+
   #logo {
     float:left;
   }
-  
+
   #logo h1 a {
     color:#333;
     text-decoration:none;
   }
-  
+
   input[type=text], input[type=password], textarea {
     border:0;
     border:1px solid #ccc;
@@ -127,60 +127,65 @@
     font-size: 14px;
     color:#444;
   }
-  
+
   input[type=text]:focus, input[type=password]:focus, textarea:focus {
     border:1px solid #aaa;
-  } 
-  
+  }
+
   * {
     outline:none;
   }
-  
+
   .user-form {
     float:left;
   }
-  
+
   .omniauth-connect {
     float:left;
     margin-left:200px;
   }
-  
+
   .clear {
     clear:both;
   }
-  
+
   .twitter-follow-button {
     width:140px !important;
   }
-  
+
   .follow-me {
     padding: 0 0px 0px 0;
     position:absolute;
     margin-left:850px;
     margin-top:50px;
   }
-  
+
   #status_message {
     width:400px;
   }
-  
+
   td {
     vertical-align:top;
   }
-  
+
   td p {
     margin-bottom:5px;
   }
-  
+
   .time {
     color:#999;
     font-size:12px;
   }
-  
+
   .username {
     color:#007000;
   }
-  
+
   .no-username {
     color:#888;
+  }
+  
+  .let-me-know {
+    color:#999;
+    font-size:13px;
   }

@@ -2,7 +2,9 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title><%= h(yield(:title) || "Untitled") %></title>
+    <title><%= h('Omniauth authlogic demo - '+yield(:title) || "Untitled") %></title>
+    <meta name="keywords" content="omniauth, authlogic, rails 2.3, oauth, oauth2, demo" />
+    <meta name="description" content="An application demonstrating external authentication using omniauth with authlogic in rails" />
     <%= stylesheet_link_tag 'application' %>
     <%= yield(:head) %>
   </head>
@@ -16,14 +18,20 @@
         <h1><%= link_to "OmniAuth Authlogic demo", root_path %></h1>
       </div>
       <div id="user_nav">
-          <%= link_to "Home", root_path %> |
+        <%= link_to "Home", root_path %> |
         <% if current_user %>
           <%= link_to "Edit Profile", edit_user_path(current_user.id) %> |
           <%= link_to "Signout", signout_path %>
         <% else %>
           <%= link_to "Register", new_user_path %> |
-          <%= link_to "Signin", signin_path %>
+          <%= link_to "Sign in", signin_path %>
         <% end %>
+        <br />
+        <br />
+        <div class="let-me-know">
+          If you want any specific feature to<br />
+          be demoed, you can <a href="https://github.com/madhums/omniauth-authlogic-demo/issues" title="issue tracker">let me know</a>
+        </div>
       </div>
       <div class="clear"></div>
       <br />
@@ -43,5 +51,18 @@
       </div>
       <div class="clear"></div>
     </div>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20077198-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
   </body>
 </html>
