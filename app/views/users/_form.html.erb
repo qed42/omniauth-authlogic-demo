@@ -1,13 +1,13 @@
 <div class="user-form">
   <% form_for(user) do |f| %>
-  
+
     <%= f.error_messages(
       :header_message => '',
       :message => 'Following errors were found:',
       :id=> "flash_error"
       )
     %>
-    
+
     <p>
       <%= f.label :username %><br />
       <%= f.text_field :username %>

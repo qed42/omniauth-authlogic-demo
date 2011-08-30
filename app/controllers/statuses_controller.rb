@@ -1,6 +1,6 @@
 class StatusesController < ApplicationController
   before_filter :require_user, :only => [:create]
-  
+
   def create
     @status = current_user.statuses.build(params[:status])
     if @status.save
@@ -10,7 +10,7 @@ class StatusesController < ApplicationController
     end
     redirect_to root_url
   end
-  
+
   def index
     @statuses = Status.recent
   end

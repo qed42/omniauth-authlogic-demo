@@ -5,11 +5,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
 
   map.root :controller => 'statuses', :action => 'index'
-  
+
   map.signup 'signup', :controller => 'users', :action => 'new'
   map.signin 'signin', :controller => 'user_sessions', :action => 'new'
   map.signout 'signout', :controller => 'user_sessions', :action => 'destroy'
-  
+
   map.callback "/auth/:provider/callback", :controller => "authorizations", :action => "create"
   map.failure "/auth/failure", :controller => "authorizations", :action => "failure"
   map.callback "/auth/:provider", :controller => "authorizations", :action => "blank"
@@ -31,7 +31,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
+
   # Sample resource route with more complex sub-resources
   #   map.resources :products do |products|
   #     products.resources :comments

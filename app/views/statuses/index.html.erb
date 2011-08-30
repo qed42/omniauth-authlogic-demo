@@ -1,7 +1,7 @@
 <% title "Statuses" %>
 
 <p>
-  <%= render :partial => 'statuses/form', :locals => { :status => Status.new } %>
+  <%= render 'form', :status => Status.new %>
 </p>
 
 <table>
@@ -17,11 +17,11 @@
       <td>
         <p>
           <%=h status.message %>
-        </p>  
+        </p>
         <div class="time">
           <%=h status.created_at.strftime('%b %d, %Y') %>
         </div>
-      
+
       </td>
     </tr>
   <% end %>

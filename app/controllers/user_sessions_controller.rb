@@ -2,7 +2,7 @@ class UserSessionsController < ApplicationController
   def new
     @user_session = UserSession.new
   end
-  
+
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
@@ -12,7 +12,7 @@ class UserSessionsController < ApplicationController
       render :new
     end
   end
-  
+
   def destroy
     @user_session = UserSession.find(params[:id])
     @user_session.destroy
