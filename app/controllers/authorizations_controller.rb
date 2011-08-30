@@ -22,6 +22,10 @@ class AuthorizationsController < ApplicationController
     flash[:notice] = "Sorry, You din't authorize"
     redirect_to root_url
   end
+
+  def blank
+    render :text => "Not Found", :status => 404
+  end
   
   def destroy
     @authorization = current_user.authorizations.find(params[:id])

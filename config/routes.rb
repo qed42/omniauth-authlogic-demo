@@ -12,7 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.callback "/auth/:provider/callback", :controller => "authorizations", :action => "create"
   map.failure "/auth/failure", :controller => "authorizations", :action => "failure"
-
+  map.callback "/auth/:provider", :controller => "authorizations", :action => "blank"
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
