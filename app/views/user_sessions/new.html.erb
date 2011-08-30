@@ -1,21 +1,34 @@
 <% title "Sign in" %>
 
-<% form_for @user_session do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
-  </p>
-  <p><%= f.submit "Sign in" %></p>
-<% end %>
+<div class="user-form">
+  <% form_for @user_session do |f| %>
+  
+    <%= f.error_messages(
+      :header_message => '',
+      :message => 'Following errors were found:',
+      :id=> "flash_error"
+      )
+    %>
+    
+    <p>
+      <%= f.label :username %><br />
+      <%= f.text_field :username %>
+    </p>
+    <p>
+      <%= f.label :password %><br />
+      <%= f.text_field :password %>
+    </p>
+    <p><%= f.submit "Sign in" %></p>
+  <% end %>
+</div>
 
-<h1>OR</h1>
-<h3>Sign in with</h3>
-<%= link_to image_tag("auth/google_64.png"), "/auth/open_id?openid_url=https://www.google.com/accounts/o8/id" %>
-<% ["twitter","facebook", "linked_in"].each do |provider| %>
-  <%= link_to image_tag("auth/#{provider}_64.png"), "/auth/#{provider}" %>
-<% end %>
+<div class="omniauth-connect">
+  <h1>OR</h1>
+  <h3>Sign in with</h3>
+  <%= link_to image_tag("auth/google_64.png"), "/auth/open_id?openid_url=https://www.google.com/accounts/o8/id" %>
+  <% ["twitter","facebook", "linked_in"].each do |provider| %>
+    <%= link_to image_tag("auth/#{provider}_64.png"), "/auth/#{provider}" %>
+  <% end %>
+</div>
+
+<div class="clear"></div>

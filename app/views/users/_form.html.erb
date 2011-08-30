@@ -1,23 +1,36 @@
-<% form_for @user do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p><%= f.submit %></p>
+<div class="user-form">
+  <% form_for @user do |f| %>
   
-  <%= render :partial => "omniauth_connect" if current_user != nil && current_user.id == @user.id %>
-  
+    <%= f.error_messages(
+      :header_message => '',
+      :message => 'Following errors were found:',
+      :id=> "flash_error"
+      )
+    %>
+    
+    <p>
+      <%= f.label :username %><br />
+      <%= f.text_field :username %>
+    </p>
+    <p>
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </p>
+    <p>
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </p>
+    <p><%= f.submit %></p>
+  <% end %>
+</div>
+
+<% if current_user != nil && current_user.id == @user.id %>
+  <div class="omniauth-connect">
+    <%= render :partial => "omniauth_connect" %>
+  </div>
+  <div class="clear"></div>
 <% end %>

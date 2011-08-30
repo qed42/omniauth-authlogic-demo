@@ -1,15 +1,21 @@
   body {
-    background-color: #4B7399;
-    font-family: Verdana, Helvetica, Arial;
+    background-color: #f9f9f9;
+    font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     font-size: 14px;
+    color:#444;
   }
 
   a img {
     border: none;
   }
 
-  a {
-    color: #0000FF;
+  a, a:hover {
+    color: #2D76B9;
+    text-decoration:none;
+  }
+  
+  a:hover {
+    text-decoration:underline;
   }
 
   .clear {
@@ -23,23 +29,25 @@
     margin: 0 auto;
     background-color: #FFF;
     padding: 20px 40px;
-    border: solid 1px black;
+    border: solid 1px #eee;
     margin-top: 20px;
   }
 
   #flash_notice, #flash_error {
-    padding: 5px 8px;
+    padding: 15px;
     margin: 10px 0;
   }
 
   #flash_notice {
-    background-color: #CFC;
-    border: solid 1px #6C6;
+    background-color: #FEEFB3;
+    border: 1px solid #ffe26f;
+    color:#9F6000;
   }
 
   #flash_error {
-    background-color: #FCC;
-    border: solid 1px #C66;
+    background-color: #f9e5e0;
+    border: 1px solid #ffd0c4;
+    color:#A30000;
   }
 
   .fieldWithErrors {
@@ -107,6 +115,64 @@
   }
   
   #logo h1 a {
-    color:#111;
+    color:#333;
     text-decoration:none;
+  }
+  
+  input[type=text], input[type=password], textarea {
+    border:0;
+    border:1px solid #ccc;
+    padding:5px;
+    font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-size: 14px;
+    color:#444;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus, textarea:focus {
+    border:1px solid #aaa;
+  } 
+  
+  * {
+    outline:none;
+  }
+  
+  .user-form {
+    float:left;
+  }
+  
+  .omniauth-connect {
+    float:left;
+    margin-left:200px;
+  }
+  
+  .clear {
+    clear:both;
+  }
+  
+  .twitter-follow-button {
+    width:140px !important;
+  }
+  
+  .follow-me {
+    padding: 0 0px 0px 0;
+    position:absolute;
+    margin-left:850px;
+    margin-top:50px;
+  }
+  
+  #status_message {
+    width:400px;
+  }
+  
+  td {
+    vertical-align:top;
+  }
+  
+  td p {
+    margin-bottom:5px;
+  }
+  
+  .time {
+    color:#999;
+    font-size:12px;
   }
