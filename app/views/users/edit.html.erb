@@ -1,4 +1,3 @@
 <% title "Edit Your Profile" %>
 
-<%= render :partial => 'form' %>
-
+<%= render 'form', :user => @user, :authorizations => @authorizations %>

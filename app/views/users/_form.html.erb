@@ -1,5 +1,5 @@
 <div class="user-form">
-  <% form_for @user do |f| %>
+  <% form_for(user) do |f| %>
   
     <%= f.error_messages(
       :header_message => '',
@@ -28,9 +28,9 @@
   <% end %>
 </div>
 
-<% if current_user != nil && current_user.id == @user.id %>
+<% if current_user != nil && current_user.id == user.id %>
   <div class="omniauth-connect">
-    <%= render :partial => "omniauth_connect" %>
+    <%= render 'omniauth_connect', :authorizations => authorizations %>
   </div>
   <div class="clear"></div>
 <% end %>
