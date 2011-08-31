@@ -1,7 +1,7 @@
   body {
     background-color: #f9f9f9;
     font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     color:#444;
   }
 
@@ -184,7 +184,7 @@
   .no-username {
     color:#888;
   }
-  
+
   .let-me-know {
     color:#999;
     font-size:13px;
